@@ -5,7 +5,7 @@ except ImportError:
 
 
 #video name
-videoname = "sample" #please write your video name
+videoname = "sample.mp4" #please write your video name
 
 video_path = "videos/" + videoname
 
@@ -25,6 +25,8 @@ def video_to_images(video_path):
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 print("canceled")
                 break
+        else:
+            break
 
         num += 1
 
@@ -33,5 +35,5 @@ def video_to_images(video_path):
 
     print('completed!')
 
-if __name__ == 'main':
+if __name__ == '__main__':
     video_to_images(video_path)
